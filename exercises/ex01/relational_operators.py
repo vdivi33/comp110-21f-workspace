@@ -1,4 +1,4 @@
-"""Relational operator demonstration!"""
+"""Demonstrating several different types of relational operators!"""
 __author__ = "730470448"
 
 left_hand: str = input("Left-hand side: ")
