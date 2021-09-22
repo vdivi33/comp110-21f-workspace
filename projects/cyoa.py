@@ -165,10 +165,8 @@ def fill(word: str, pos: int) -> str:
 
 def snake_eyes(p: int) -> int:
     """An addiitonal mode that the player choose that can either reduce their points by half or double it."""
-    r1: int = random.randint(0 ,2)
-    r2: int = random.randint(0 ,2)
-
-    
+    r1: int = random.randint(0 , 2)
+    r2: int = random.randint(0 , 2) 
     if(r1 == r2):
         print("The Snake saw you, points halved")
         p = p // 2
