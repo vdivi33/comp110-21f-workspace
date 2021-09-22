@@ -7,8 +7,12 @@ hang_line: str = ""
 points: int = 0
 guesses: int = 0
 replayed: bool = False
-
-
+NAMED_CONSTANT = "\U00000000"
+SMILE = "\U0001F604"
+SAD = "\U0001F615"
+SNAKE = "\U0001F40D"
+CROSS = "\U0000274C"
+print(SMILE)
 def main() -> None:
     """The main function that makes calls to other functions. Compiles and prints the final points."""
     global points
@@ -19,7 +23,7 @@ def main() -> None:
     if(replayed is False):
         greet()
     else:
-        print(f"Welcome back {player}!")
+        print(f"Welcome back {player} {SMILE}!")
     if(replayed is False):
         play_option: str = input("Would you like to play? Enter y or n :: ")
     play_option = "y"
@@ -62,7 +66,7 @@ def greet() -> None:
     """Greets the player and assigns their name to the global player variable."""
     global player
     player = input("What is your name? ")
-    print(f"Hello There {player}! Welcome to hang py, a typical hang man game but python themed!")
+    print(f"Hello There {player}! Welcome to hang py {SNAKE}, a typical hang man game but python themed!")
     print("-You have double as many guesses as the words number of characters. Ex: cobra would have 10 guesses.")
     print("- Snake eyes is an optional mode that can either double your points or lose the game!")
     print("-The snake eye function returns true is two random integers are equal.")
@@ -126,11 +130,11 @@ def guess(x: str) -> None:
             print("Entered Guess Mode")
             full: str = input("Enter the full word: ")
             if(full == x):
-                print("Correct!")
+                print(f"Correct! {SMILE}")
                 points = len(x)
                 break
             else:
-                print("Incorrect")
+                print(f"That is Incorrect {player} {CROSS}")
                 break
         else:
             if(len(g) == 1 and letter.find(g) < 0):
@@ -145,7 +149,7 @@ def guess(x: str) -> None:
 
                     i = i + 1
                 if(c is True):
-                    print("That is incorrect")
+                    print(f"That is incorrect {CROSS}")
                 i = 0
                 c = False
             else:
@@ -168,11 +172,11 @@ def snake_eyes(p: int) -> int:
     r1: int = random.randint(0, 2)
     r2: int = random.randint(0, 2) 
     if(r1 == r2):
-        print("The Snake saw you, points halved")
+        print(f"The {SNAKE} saw {player}, points halved {SAD}")
         p = p // 2
     else:   
         p = p * 2
-        print("The Snake did not see you! Points multiplied by 2!")
+        print(f"The {SNAKE} did not see {player}! Points multiplied by 2! {SMILE}")
     return p
 
 
