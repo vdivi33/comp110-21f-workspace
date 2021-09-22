@@ -13,6 +13,8 @@ SAD = "\U0001F615"
 SNAKE = "\U0001F40D"
 CROSS = "\U0000274C"
 print(SMILE)
+
+
 def main() -> None:
     """The main function that makes calls to other functions. Compiles and prints the final points."""
     global points
