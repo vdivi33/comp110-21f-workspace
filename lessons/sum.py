@@ -3,4 +3,7 @@
 
 def sum(xs: list[float]) -> float:
     """Compute the sum of a list."""
-    return 0.0
+    if( len(xs) == 0.0):
+        return 0.0
+    else:
+        return xs[0]
