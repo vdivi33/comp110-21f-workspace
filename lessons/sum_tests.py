@@ -12,3 +12,7 @@ def test_sum_empty() -> None:
 def test_sum_single_item() -> None:
     xs: list[float] = [110.0]
     assert sum(xs) == 110.0 
+
+def test_sum_many_items() -> None:
+    xs: list[float] = [1.0, 2.0, 3.0]
+    assert sum(xs) == 6.0
