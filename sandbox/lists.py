@@ -1,6 +1,2 @@
-string: str = "abcdefghijklmnop"
-lists = list[string]
-lists = list["added?", string, "jello"]
-list2 = list[3]
-print(lists)
-print(list())
+for x in [1,2,3]:
+    print(x)
