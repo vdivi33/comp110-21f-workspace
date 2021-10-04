@@ -15,7 +15,7 @@ def only_evens(lis: list[int]) -> list[int]:
 
 def sub(lis: list[int], start: int, end: int):
     l2: list[int] = []
-    if(start > 0 and start <= len(lis) and end <= len(lis) and len(lis) > 0):
+    if(start >= 0 and start <= len(lis) and end <= len(lis) and len(lis) > 0):
         i: int = start
         while i < end:
             l2.append(lis[i])
