@@ -6,13 +6,13 @@ from exercises.ex05.utils import only_evens
 __author__ = "730470448"
 
 
-def test_onlyOdds() -> None:
+def test_onlyOdds_evens_only() -> None:
     assert only_evens([1,3,5,7]) == []
 
 
-def test_empty() -> None:
+def test_empty_evens_only() -> None:
     assert only_evens([]) == []
 
 
-def test_normal() -> None:
+def test_normal_evens_only() -> None:
     assert only_evens([1,2,3,4,5,6,7,8]) == [2,4,6,8]
