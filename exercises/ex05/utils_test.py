@@ -14,8 +14,3 @@ def only_evens_test_empty() -> None:
 
 def only_evens_test_normal() -> None:
     assert only_evens([1,2,3,4,5,6,7,8]) == [2,4,6,8]
-
-
-def only_evens_test_normal2() -> None:
-    assert only_evens([1,6,4,8]) == [6,4,8]
-
