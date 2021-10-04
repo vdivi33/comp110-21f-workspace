@@ -6,6 +6,7 @@ __author__ = "730470448"
 
 
 def only_evens(lis: list[int]) -> list[int]:
+    """Given a list of integers, this function returns a list containing only even elements."""
     l2: list[int] = []
     for i in lis:
         if(i % 2 == 0):
@@ -14,6 +15,7 @@ def only_evens(lis: list[int]) -> list[int]:
         
 
 def sub(lis: list[int], start: int, end: int):
+    """Finds a specified portion of a list defined between two bounds."""
     l2: list[int] = []
     if(start < 0):
         start = 0
@@ -32,6 +34,7 @@ def sub(lis: list[int], start: int, end: int):
 
 
 def concat(lis: list[int], l2: list[int]):
+    """Merges two lists into one."""
     i: int = 0
     while i < len(l2):
         lis.append(l2[i])
