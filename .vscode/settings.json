@@ -24,4 +24,11 @@
     ],
     "python.envFile": "${workspaceFolder}/.env",
     "python.analysis.typeCheckingMode": "basic",
+    "python.testing.unittestArgs": [
+        "-v",
+        "-s",
+        "./exercises",
+        "-p",
+        "test*.py"
+    ],
 }
