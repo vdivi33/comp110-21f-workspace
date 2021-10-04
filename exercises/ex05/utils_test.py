@@ -7,7 +7,7 @@ __author__ = "730470448"
 
 
 def test_edge_case_evens_only1() -> None:
-    assert only_evens([1,3,5,7]) == []
+    assert only_evens([1, 3, 5, 7]) == []
 
 
 def test_edge_case_evens_only2() -> None:
@@ -42,5 +42,5 @@ def test_base_case_concat1() -> None:
     assert concat([1, 2], [3, 4]) == [1, 2, 3, 4]
 
 
-def test_base_case_concat1() -> None:
+def test_base_case_concat2() -> None:
     assert concat([1], [8, 9, 0]) == [1, 8, 9, 0]
