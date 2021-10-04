@@ -31,7 +31,7 @@ def test_base_case_sub1() -> None:
 
 
 def test_base_case_sub2() -> None:
-    assert sub([1, 2, 3, 4, 5], 0, 5) == [1, 2, 3, 4, 5]
+    assert sub([1, 2, 3, 4, 5], 1, 4) == [2, 3, 4]
 
 
 def test_edge_case_concat() -> None:
