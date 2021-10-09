@@ -38,12 +38,12 @@ def test_edge_case_favorite_color() -> None:
 
 def test_base_case_count() -> None:
     """Tests an expected input which converts a list into a dictionary with each number having its own count."""
-    assert count(["1", "2", "2", "1", "3"]) == {"1" : 2, "2" : 2, "3": 1}
+    assert count(["1", "2", "2", "1", "3"]) == {"1": 2, "2": 2, "3": 1}
 
 
 def test_base_case_count2() -> None:
     """Tests another expected input which converts a list into a dictionary with each number having its own count."""
-    assert count(["1", "1", "2", "1", "3", "5", "4", "3"]) == {"1" : 3, "2" : 1, "3": 2, "4": 1, "5": 1}
+    assert count(["1", "1", "2", "1", "3", "5", "4", "3"]) == {"1": 3, "2": 1, "3": 2, "4": 1, "5": 1}
 
 
 def test_edge_case_count() -> None:
