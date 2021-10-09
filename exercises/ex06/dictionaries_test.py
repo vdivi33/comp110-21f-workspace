@@ -5,6 +5,7 @@ from exercises.ex06.dictionaries import invert, favorite_color, count
 
 __author__ = "730470448"
 
+
 def test_base_case_invert() -> None:
     """Follows an expected input to reverse key and value"""
     assert invert({'a': 'A', 'b': 'B'}) == {'A': 'a', 'B': 'b'}
@@ -17,12 +18,12 @@ def test_edge_case_invert() -> None:
 
 def test_base_case_invert2() -> None:
     """Tests another expected input to invert key and value"""
-    assert invert({'a': 'b', 'c': 'd', 'e': 'f'}) == {'b' : 'a', 'd' : 'c', 'f' : 'e'}
+    assert invert({'a': 'b', 'c': 'd', 'e': 'f'}) == {'b': 'a', 'd': 'c', 'f': 'e'}
 
 
 def test_base_case_favorite_color() -> None:
     """Tests a standard input that returns the favorite color."""
-    assert favorite_color({"Marc": "yellow","Jane" : "yellow","Bob":"yellow", "John" : "green", "Tom": "green", "Ezri": "blue", "Kris": "blue","Gary":"blue"}) == 'yellow'
+    assert favorite_color({"Marc": "yellow", "Jane": "yellow", "Bob": "yellow", "John": "green", "Tom": "green", "Ezri": "blue", "Kris": "blue", "Gary": "blue"}) == 'yellow'
 
 
 def test_base_case_favorite_color2() -> None:
