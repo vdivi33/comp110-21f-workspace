@@ -3,7 +3,7 @@
 __author__ = "730470448"
 
 
-def invert(d: dict[str, str]) -> dict[str,str]:
+def invert(d: dict[str, str]) -> dict[str, str]:
     """Takes a dictionary input of two strings and switches each key and value."""
     inverted: dict[str, str]
     inverted = dict()
