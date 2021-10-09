@@ -3,10 +3,9 @@
 __author__ = "730470448"
 
 
-
-
 def invert(d) -> dict[str,str]:
-    inverted: dict[str,str]
+    """Takes a dictionary input of two strings and switches each key and value."""
+    inverted: dict[str, str]
     inverted = dict()
     for i in d:
         if(d[i] in inverted):
@@ -14,10 +13,9 @@ def invert(d) -> dict[str,str]:
         inverted[d[i]] = i
     return inverted
 
-print(invert({'a' : 'A', 'b' : 'a'}))
-
 
 def favorite_color(color_dict) -> str:
+    """Takes in a dict[str, str] argument and returns a string of the most common color among the values."""
     count: int = 0
     color_set: dict[str, int]
     color_set = dict()
@@ -35,17 +33,14 @@ def favorite_color(color_dict) -> str:
     return greatest
 
 
-def count(l) -> dict[str,int]:
+def count(lis) -> dict[str, int]:
+    """Takes in a list[int] argument and returns a dictionary with the count of each integer in the list."""
     d: dict[str, int]
     d = dict()
-    for i in l:
-        if(i in d):
-            d[i] += 1
+    for i in lis:
+        if(str(i) in d):
+            d[str(i)] += 1
         else:
-            d[i] =0
+            d[str(i)] = 1
     return d
-    
-print(favorite_color({"Marc": "yellow","Jane" : "yellow","Bob":"yellow", "John" : "green", "Tom": "green", "Bill":"green", "Ezri": "blue", "Kris": "blue","Gary":"blue"}))
-print(favorite_color({"Marc":"blue"}))
-print(count([1,2,3,4,4,4,2,1,4]))
 # Define your functions below
