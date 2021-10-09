@@ -3,7 +3,7 @@
 __author__ = "730470448"
 
 
-def invert(d) -> dict[str,str]:
+def invert(d: dict[str, str]) -> dict[str,str]:
     """Takes a dictionary input of two strings and switches each key and value."""
     inverted: dict[str, str]
     inverted = dict()
@@ -14,7 +14,7 @@ def invert(d) -> dict[str,str]:
     return inverted
 
 
-def favorite_color(color_dict) -> str:
+def favorite_color(color_dict: dict[str, str]) -> str:
     """Takes in a dict[str, str] argument and returns a string of the most common color among the values."""
     count: int = 0
     color_set: dict[str, int]
@@ -33,7 +33,7 @@ def favorite_color(color_dict) -> str:
     return greatest
 
 
-def count(lis) -> dict[str, int]:
+def count(lis: list[str]) -> dict[str, int]:
     """Takes in a list[int] argument and returns a dictionary with the count of each integer in the list."""
     d: dict[str, int]
     d = dict()
