@@ -91,13 +91,15 @@ def listing(table: dict[str,list[str]]) -> list[str]:
             result.append(i)
     return result
 
-def merge(table_one: dict[str, list[str]], table_two: dict[str, list[str]]) -> dict[str,str]:
+
+def merge(list_one: list[str], list_two: list[str]) -> dict[str,str]:
     result: dict[str, str]
     result = dict()
-
-    for element in table_one:
-        for i in table_two:
-            result[table_one[element]] = "hi"
+    j: int = 0
+    for i in list_one:
+        while j < len(list_two):
+            result[i] = list_two[j]
+            j += 1
 
 
 
