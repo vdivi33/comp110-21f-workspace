@@ -82,6 +82,25 @@ def concat(table_one: dict[str, list[str]], table_two: dict[str, list[str]]) -> 
     return result
 
 
+def listing(table: dict[str,list[str]]) -> list[str]:
+    result: list[str]
+    result = list()
+    j: int = 0
+    for element in table:
+        for i in table[element]:
+            result.append(i)
+    return result
+
+def merge(table_one: dict[str, list[str]], table_two: dict[str, list[str]]) -> dict[str,str]:
+    result: dict[str, str]
+    result = dict()
+
+    for element in table_one:
+        for i in table_two:
+            result[table_one[element]] = "hi"
+
+
+
 def count(list1: list[str]) -> dict[str, int]:
     """Counts the number of times a value exists in a key and puts it into a dictionary."""
     store: dict[str, int]
@@ -100,3 +119,5 @@ def count(list1: list[str]) -> dict[str, int]:
                 i = i + 1
         i = 0
     return store
+
+
