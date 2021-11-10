@@ -16,8 +16,6 @@ def read_csv_rows(filename: str) -> list[dict[str, str]]:
     for row in csv_reader:
         result.append(row)
     file_handle.close()
-
-    # TODO: More Work!
     return result
 
 
@@ -82,25 +80,70 @@ def concat(table_one: dict[str, list[str]], table_two: dict[str, list[str]]) -> 
     return result
 
 
-def listing(table: dict[str,list[str]]) -> list[str]:
+def sum(table: list[str], table_two: list[str]) -> dict[str, float]:
+    """Returns the sum of difficulties to each respective section type."""
+    result: dict[str, float]
+    result = dict()
+    i: int = 0
+    sum_remote: int = 0
+    sum_in: int = 0
+    result["Remote"] = 0
+    result["In-Person"] = 0
+
+    while i < len(table):
+        if(table[i] == "Remote"):
+            sum_remote = sum_remote + int(table_two[i])
+            i += 1
+        elif(table[i] == "In-Person"):
+            sum_in = sum_in + int(table_two[i])
+            i += 1
+        else:
+            i = i + 1
+    
+    result["Remote"] = sum_remote / len(table)
+    result["In-Person"] = sum_in / len(table)
+    return result
+            
+
+def five_above(table: list[str], table_two: list[str]) -> dict[str, int]:
+    """Counts the number of times a student responds that the difficulty is greater than 5."""
+    result: dict[str, int]
+    result = dict()
+    i: int = 0
+    above_remote: int = 0
+    above_in: int = 0
+    result["Remote"] = 0
+    result["In-Person"] = 0
+
+    while i < len(table):
+        if(table[i] == "Remote"):
+            if(int(table_two[i]) > 5):
+                above_remote = above_remote + 1
+                i += 1
+            else:
+                i += 1
+        elif(table[i] == "In-Person"):
+            if(int(table_two[i]) > 5):
+                above_in = above_in + 1
+                i += 1
+            else:
+                i += 1
+        else:
+            i = i + 1
+    
+    result["Remote"] = above_remote
+    result["In-Person"] = above_in
+    return result
+            
+
+def listing(table: dict[str, list[str]]) -> list[str]:
+    """Converts dictionaries into lists of values."""
     result: list[str]
     result = list()
-    j: int = 0
     for element in table:
         for i in table[element]:
             result.append(i)
     return result
-
-
-def merge(list_one: list[str], list_two: list[str]) -> dict[str,str]:
-    result: dict[str, str]
-    result = dict()
-    j: int = 0
-    for i in list_one:
-        while j < len(list_two):
-            result[i] = list_two[j]
-            j += 1
-
 
 
 def count(list1: list[str]) -> dict[str, int]:
@@ -121,5 +164,3 @@ def count(list1: list[str]) -> dict[str, int]:
                 i = i + 1
         i = 0
     return store
-
-
