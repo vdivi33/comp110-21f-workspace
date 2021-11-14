@@ -17,12 +17,26 @@ class Point:
 
     def scale(self, factor: float) -> Point:
         """Immutable: multiplies compnents by factor without mutation."""
-        x: float = self.x * factor
-        y: float = self.y * factor
-        scaled_point: Point = Point(x, y)
-        return scaled_point
+        return Point(self.x * factor, self.y * factor)
 
-p0: Point = Point(1.0, 2.0)
-p1: Point = p0.scale(2.0)
-print(f"{p0.x} , {p0.y}")
-print(f"{p1.x} , {p1.y}")
+    def __str__(self) -> str:
+        """Produce a str representtion of a point for humans."""
+        return f"{self.x}, {self.y}"
+    
+    def __repr__(self) -> str:
+        """"Produce a str representation of a point for Python!"""
+        return f"Point({self.x}, {self.y})"
+
+    def __mul__(self, factor: float) -> Point:
+        """Overload the multiplication operator for Point * float."""
+        return Point(self.x * factor, self.y * factor)
+    
+    def __add__(self, rhs: Point) -> Point:
+        print("__add__ was called")
+        return Point(self.x + rhs.x, self.y + rhs.y)
+
+a: Point = Point(1.0, 2.0)
+b: Point = a * 2.0
+print(a + b)
+print(a) 
+print(b)
